@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="clip_vertical"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/Solicitação"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="btnSolicitação"
         android:text="SOLICITAÇÃO" />
 
 
@@ -24,23 +25,28 @@
             android:layout_height="wrap_content"
             android:text="Abono Pecuniário" />
 
+
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <RadioButton
             android:id="@+id/radioSim"
-            android:layout_width="match_parent"
+            android:layout_width="420dp"
             android:layout_height="wrap_content"
+            android:checked="true"
+            android:onClick="OnRadioClick"
             android:text="Sim" />
 
         <RadioButton
             android:id="@+id/radioNão"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="OnRadioClick"
             android:text="Não" />
 
     </RadioGroup>
+
 
 
     <TextView
@@ -48,6 +54,9 @@
         android:layout_width="483dp"
         android:layout_height="wrap_content"
         android:text="Data Inicio" />
+
+
+
 
     <Button
         android:id="@+id/btnSELECIONE"
@@ -62,7 +71,7 @@
         android:text="Qtde de Dias" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spnspinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -83,8 +92,7 @@
         android:layout_width="198dp"
         android:layout_height="60dp"
         android:layout_gravity="center_vertical|center_horizontal|center"
-        android:onClick="btnRegistrar"
         android:text="Registrar" />
 
-
 </LinearLayout>
+</ScrollView>
