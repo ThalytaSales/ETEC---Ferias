@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Ferias</string>
+    <string name="solicitacao">Solicitação</string>
+    <string name="abonoPecuniario">Abono Pecuniário:</string>
+    <string name="sim">Sim</string>
+    <string name="nao">Não</string>
+    <string name="dataInicio">Data Início:</string>
+    <string name="selecione">Selecione</string>
+    <string name="quantidadeDias">Qtd de Dias:</string>
+    <string name="dataFim">Data Fim:</string>
+    <string name="registrar">Registrar</string>
+    <string name="comboBox">Combo Box</string>
 </resources>

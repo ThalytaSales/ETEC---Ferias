@@ -6,93 +6,97 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/Solicitação"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SOLICITAÇÃO" />
+        android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
 
+            android:background="@color/colorAccent"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView"
+            <TextView
+                style="titulo"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/solicitacao" />
+        </LinearLayout>
+
+        <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Abono Pecuniário" />
+            android:stretchColumns="0,1">
+
+            <TableRow
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="abonoPecuniario"/>
+
+                <RadioGroup
+                    android:id="@+id/groupOpcao"
+                    android:orientation="horizontal"
+                    android:onClick="OnRadioClick">
+
+                    <RadioButton
+                        android:id="@+id/radioSim"
+                        android:layout_width="115dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="OnRadioClick"
+                        android:text="Sim" />
+
+                    <RadioButton
+                        android:id="@+id/radioNão"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="OnRadioClick"
+                        android:text="Não" />
+                </RadioGroup>
+            </TableRow>
+            <TableRow
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/viewDataInicio"
+                    android:text="Data Inicio" />
+
+                <Button
+                    android:id="@+id/btnSelecione"
+                    android:onClick="onSelecionarData"
+                    android:text="Selecione" />
+            </TableRow>
+            <TableRow
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Qde de Dias"/>
+
+                <Spinner
+                    android:id="@+id/spnspinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:prompt="spnspinner"></Spinner>
+            </TableRow>
+            <TableRow
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="DataFim"/>
+
+                <Button android:id="@+id/btnDataFim" />
+            </TableRow>
+
+            <Button
+                android:id="@+id/btnRegistrar"
+                android:onClick="calcularDataFinal"
+                android:text="Registrar" />
 
 
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-        <RadioButton
-            android:id="@+id/radioSim"
-            android:layout_width="420dp"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:onClick="OnRadioClick"
-            android:text="Sim" />
+        </TableLayout>
 
-        <RadioButton
-            android:id="@+id/radioNão"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="OnRadioClick"
-            android:text="Não" />
-
-    </RadioGroup>
-
-
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="483dp"
-        android:layout_height="wrap_content"
-        android:text="Data Inicio" />
-
-
-
-
-    <Button
-        android:id="@+id/btnSELECIONE"
-        android:layout_width="198dp"
-        android:layout_height="60dp"
-        android:text="SELECIONE" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Qtde de Dias" />
-
-    <Spinner
-        android:id="@+id/spnspinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Data Fim" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="date" />
-    <Button
-        android:id="@+id/btnRegistrar"
-        android:layout_width="198dp"
-        android:layout_height="60dp"
-        android:layout_gravity="center_vertical|center_horizontal|center"
-        android:text="Registrar" />
-
-</LinearLayout>
+    </LinearLayout>
 </ScrollView>
